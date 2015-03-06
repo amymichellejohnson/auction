@@ -28,9 +28,11 @@
           <div class="item">
               <img src="http://i.huffpost.com/gen/1966437/thumbs/o-CRAFT-BEERS-facebook.jpg"/>
           </div>
+          {{#each}}
           <div class="item">
               <img {{bind-attr src = photo}} />
           </div>
+          {{/each}}
         </div>
         <!-- Carousel nav -->
         <a class="carousel-control left" href="#myCarousel" data-slide="prev">
