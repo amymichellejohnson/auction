@@ -1,5 +1,4 @@
-<h1>hello world!</h1>
-<h1> {{name}} </h1>
+<h1> Product{{name}} </h1>
 
 {{#if isEditing}}
   <div class="container">
@@ -42,7 +41,7 @@
   </div>
 {{else}}
 
-  <p><img {{bind-attr src = photo}} height="90%" width="90%"> {{owner}} {{bidNumber}} {{startPrice}} {{description}} {{backstory}} {{year}}</p>
+  <p><img {{bind-attr src = photo}} height="40%" width="40%"> {{owner}} {{bidNumber}} {{startPrice}} {{description}} {{backstory}} {{year}}</p>
     <button class="btn btn-primary" {{action 'edit'}}>Edit</button>
     <button class="btn btn-danger" {{action 'delete' this}}>Delete</button>
 {{/if}}

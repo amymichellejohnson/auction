@@ -1,9 +1,7 @@
-<h2>Here is the {{title}} Lot:</h2>
+<div class="container well">
+    <form class="form">
+      <legend>Add Products to the {{title}} lot:</legend>
 
-
-<div class="container">
-  <h2>Add Products to this lot</h2>
-    <form>
       <div class="form-group">
         <label for="Name">Product Title:</label>
         {{input name="name" value=name type="text" placeholder="Name of item"}}
@@ -21,7 +19,7 @@
         {{input name="bidNumber" value=bidNumber type="number"}}
       </div>
       <div class="form-group">
-        <label for="startPrice">Estimated Starting Price::</label>
+        <label for="startPrice">Estimated Starting Price:</label>
         {{input name="startPrice" value=startPrice type="text"}}
       </div>
       <div class="form-group">
@@ -41,11 +39,13 @@
 </div>
 
 <div class="container">
-  <p></p>
-  {{#each item in products}}
-     <p>{{#link-to 'product' item.id}} <img {{bind-attr src = item.photo}} height="82" width="82"> {{item.name}} {{item.owner}} {{item.bidNumber}} {{item.startPrice}}{{/link-to}}</p>
-     <button class="btn btn-danger" {{action 'delete' item}}>Delete</button>
-  {{/each}}
-
-  {{outlet}}
+  <ul class="list-group">
+    {{#each item in products}}
+      <li class="list-group-item">
+        <p>{{#link-to 'product' item.id}} <img {{bind-attr src = item.photo}} height="100" width="100"> {{item.name}} {{item.owner}} {{item.bidNumber}} {{item.startPrice}}{{/link-to}}</p>
+        <button class="btn btn-danger" {{action 'delete' item}}>Delete</button>
+      </li>
+    {{/each}}
+  </ul>
+{{outlet}}
 </div>
