@@ -23,7 +23,7 @@ No known bugs at this time.
 
 AUTHORS
 -------
-Debbie Cravey   cinemaestro@yahoo.com
+Debbie Cravey   cinemaestro@yahoo.com  and
 Amy Michelle Johnson    amy.johnson.michelle@gmail.com
 
 
