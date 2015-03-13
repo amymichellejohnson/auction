@@ -1,51 +1,46 @@
+<br>
 <div class="container well">
-    <form class="form">
-      <legend>Add Products to the {{title}} lot:</legend>
-
-      <div class="form-group">
-        <label for="Name">Product Title:</label>
-        {{input name="name" value=name type="text" placeholder="Name of item"}}
-      </div>
-      <div class="form-group">
-        <label for="description">Description:</label>
-        {{input name="description" value=description type="text"}}
-      </div>
-      <div class="form-group">
-        <label for="owner">Owner:</label>
-        {{input name="owner" value=owner type="text"}}
-      </div>
-      <div class="form-group">
-        <label for="bidNumber">Bid Number:</label>
-        {{input name="bidNumber" value=bidNumber type="number"}}
-      </div>
-      <div class="form-group">
-        <label for="startPrice">Estimated Starting Price:</label>
-        {{input name="startPrice" value=startPrice type="text"}}
-      </div>
-      <div class="form-group">
-        <label for="backstory">Item's History:</label>
-        {{input name="backstory" value=backstory type="text"}}
-      </div>
-      <div class="form-group">
-        <label for="year">Year Acquired:</label>
-        {{input name="year" value=year type="text"}}
-      </div>
-      <div class="form-group">
-        <label for="photo">Upload Picture:</label>
-        {{input name="photo" value=photo type="url"}}
-      </div>
-      <button class="btn btn-default" {{action 'save'}}>Submit</button>
-    </form>
+  <form class="form">
+    <h3>Add Products to the {{title}} Department:</h3>
+    <br>
+    <div class="form-group">
+      <label for="Name">Product Title:</label>
+      {{input name="name" value=name type="text" placeholder="Name of item"}}
+    </div>
+    <div class="form-group">
+      <label for="description">Description:</label>
+      {{textarea name="description" value=description type="text"}}
+    </div>
+    <div class="form-group">
+      <label for="owner">Artist/Producer:</label>
+      {{input name="owner" value=owner type="text"}}
+    </div>
+    <div class="form-group">
+      <label for="startPrice">Estimated Price:</label>
+      {{input name="startPrice" value=startPrice type="text"}}
+    </div>
+    <div class="form-group">
+      <label for="backstory">Item's backstory:</label>
+      {{textarea name="backstory" value=backstory type="text"}}
+    </div>
+    <div class="form-group">
+      <label for="photo">Upload Picture:</label>
+      {{input name="photo" value=photo type="url"}}
+    </div>
+    <button class="btn btn-default" {{action 'save'}}>Submit</button>
+  </form>
 </div>
-
-<div class="container">
-  <ul class="list-group">
-    {{#each item in products}}
-      <li class="list-group-item">
-        <p>{{#link-to 'product' item.id}} <img {{bind-attr src = item.photo}} height="100" width="100"> {{item.name}} {{item.owner}} {{item.bidNumber}} {{item.startPrice}}{{/link-to}}</p>
-        <button class="btn btn-danger" {{action 'delete' item}}>Delete</button>
-      </li>
-    {{/each}}
-  </ul>
-{{outlet}}
-</div>
+{{#if this.products.length}}
+  <div class="container well productname">
+    <h3>Products currently in the {{title}} Department:</h3>
+    <ul class="list-group">
+      {{#each item in products}}
+        <li class="list-group-item">
+          <p>{{#link-to 'product' item.id}} <img {{bind-attr src = item.photo}} height="100" width="100"> {{item.name}} {{item.owner}} {{item.bidNumber}} {{item.startPrice}}{{/link-to}}</p>
+          <button class="btn btn-danger" {{action 'delete' item}}>Delete</button>
+        </li>
+      {{/each}}
+    </ul>
+  {{outlet}}
+  </div>
+{{/if}}

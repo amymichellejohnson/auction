@@ -1,0 +1,16 @@
+{{#if this.products.length}}
+  <div class="container">
+    <ul class="list-group">
+      <li class="list-group-item lotname"><img {{bind-attr src = lotphoto}} height="40%" width="40%"> {{title}} {{date}}</li>
+      <h3>Products currently in the {{title}} Department:</h3>
+      {{#each item in products}}
+        <li class="list-group-item">
+          <p>{{#link-to 'viewproduct' item.id}} <img {{bind-attr src = item.photo}} height="100" width="100"> {{item.name}} {{item.owner}} {{item.bidNumber}} {{item.startPrice}}{{/link-to}}</p>
+        </li>
+      {{/each}}
+    </ul>
+  {{outlet}}
+  </div>
+{{else}}
+<h3>There are not products in this department yet!</h3>
+{{/if}}

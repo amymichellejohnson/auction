@@ -20,6 +20,7 @@
             <!-- <h2>Slide 1</h2> -->
             <img src="https://inspirationfeeed.files.wordpress.com/2013/09/p6xwfbf1.jpg"/>
             <div class="carousel-caption">
+              <!-- <h4>Kitten Is Utterly Confused By The Discovery Of Her Tail</h4> -->
             </div>
           </div>
           <div class="item">
@@ -45,37 +46,3 @@
     </div>
   <!-- </div> -->
 <!-- </div> -->
-
-
-<div class="container">
-  <div class="col-md-6">
-    <h2>Create a Department:</h2>
-    <br>
-    <form class="form">
-      <div class="form-group">
-        <label for="title">Department Title:</label>
-        {{input name="title" value=title type="text" placeholder="Title"}}
-      </div>
-      <div class="form-group">
-        <label for="date">Date of creation:</label>
-        {{input name="date" value=date type="date"}}
-      </div>
-      <div class="form-group">
-        <label for="lotphoto">Upload Department Photo</label>
-        {{input name="lotphoto" value=lotphoto type="url" placeholder="https://......"}}
-      </div>
-      <button class="btn btn-default" {{action 'save'}}>Submit</button>
-    </form>
-  </div>
-  <div class="col-md-6 lotname">
-    {{#if this.length}}
-      <h2>Click on a Department to Add Products:</h2>
-    {{/if}}
-    <br>
-    {{#each}}
-      <p>{{#link-to 'lot' this.id}} <img {{bind-attr src = lotphoto}} height="164" width="164"> {{title}}{{/link-to}}
-      <button class="btn btn-xs btn-danger" {{action 'delete' this}}>Delete</button></p>
-
-    {{/each}}
-  </div>
-</div>

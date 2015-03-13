@@ -1,22 +1,16 @@
-body {
-font-family: 'Caudex', serif;
+h2, h3{
+  font-family: 'Courgette', cursive;
 }
 
-/*.carousel-element{
-    margin-left: -100px;
-}*/
+.lotname {
+  font-family: 'Courgette', cursive;
+  font-size: 200%
+}
 
-/*.carousel{
-    margin-top: 20px;
-}*/
-
-/*.carousel-inner > .item > img,
-.carousel-inner > .item > a > img {
-    width: 70%;
-    margin: auto;
-}*/
-
-
+.productname {
+  font-family: 'Courgette', cursive;
+  font-size: 150%
+}
 .inner-item {
     text-align: center;
     img {
@@ -24,9 +18,7 @@ font-family: 'Caudex', serif;
     }
 }
 
-/*.bs-example{
-	margin: 20px;
-}*/
+
 .item{
     /*background: #333;*/
     text-align: center;
