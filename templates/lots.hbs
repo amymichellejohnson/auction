@@ -1,20 +1,18 @@
 
 <div class="container">
-  <div class="lotname">
     {{#unless isAdding}}
       <h2>Click on a Department to add your products:</h2>
+      <p class="link" {{action "adding"}}>Don't see the department you need?  Add a department here</p>
+
 
       <br>
       {{#each}}
-        <ul class="list-group gallery-view-sm">
+        <ul class="list-group gallery-view-sm lotname">
           <li class="list-group-item"><p>{{#link-to 'lot' this.id}} <img {{bind-attr src = lotphoto}}  width="164"> {{title}}{{/link-to}}</p>
           <button class="btn btn-xs btn-danger" {{action 'delete' this}}>Delete</button></li>
         </ul>
       {{/each}}
-      <h2 {{action "adding"}}>Don't see the department you need?  Add a department here</h2>
-
     {{/unless}}
-  </div>
     {{#if isAdding}}
       <h2>Create a Department:</h2>
       <br>
@@ -32,6 +30,7 @@
           {{input name="lotphoto" value=lotphoto type="url" placeholder="https://......"}}
         </div>
         <button class="btn btn-default" {{action 'save'}}>Submit</button>
+        <button class="btn" {{action 'cancel'}}>Cancel</button>
       </form>
     {{/if}}
 </div>
