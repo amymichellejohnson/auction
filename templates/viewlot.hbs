@@ -1,13 +1,13 @@
-<div class="container lotname">
+<div class="container-fluid lotname">
   {{#if this.products.length}}
     <ul class="list-group">
-      <li class="list-group-item"><img {{bind-attr src = lotphoto}} height="40%" width="40%"> {{title}} {{date}}</li>
+      <li class="list-group-item emphasis"><img class="lg" {{bind-attr src = lotphoto}}> {{title}}</li>
       <h3>Products currently in the {{title}} Department:</h3>
     </ul>
       {{#each item in products}}
         <ul class="list-group gallery-view-sm">
           <li class="list-group-item">
-          {{#link-to 'viewproduct' item.id}} <img {{bind-attr src = item.photo}} width="164"> {{item.name}} {{item.owner}} {{item.bidNumber}} {{item.startPrice}}{{/link-to}}
+          {{#link-to 'viewproduct' item.id}} <img class="sm"{{bind-attr src = item.photo}}> {{item.name}} {{item.owner}} {{item.bidNumber}} {{item.startPrice}}{{/link-to}}
           </li>
         </ul>
       {{/each}}
