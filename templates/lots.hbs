@@ -1,10 +1,8 @@
 
-<div class="container-fluid">
+<!-- <div class="container-fluid"> -->
     {{#unless isAdding}}
       <h2>Click on a Department to add your products:</h2>
       <p class="link" {{action "adding"}}>Don't see the department you need?  Add a department here</p>
-
-
       <br>
       {{#each}}
         <ul class="list-group gallery-view-sm lotname">
@@ -33,4 +31,4 @@
         <button class="btn" {{action 'cancel'}}>Cancel</button>
       </form>
     {{/if}}
-</div>
+<!-- </div> -->

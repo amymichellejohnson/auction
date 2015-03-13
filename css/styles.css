@@ -17,10 +17,10 @@ img.lg {
 
 }
 
-.container-fluid {
+/*.container-fluid {
   text-align: center;
   margin-right: 5px;
-}
+}*/
 
 .lotname {
   font-size: 150%;
@@ -34,8 +34,7 @@ img.lg {
   background-color: #EEEEEE;
 }
 .gallery-view-lg {
-  height: 400px;
-  width: auto;
+  width: 350px;
   float: left;
   padding: 5px;
   text-align: center;
@@ -43,7 +42,7 @@ img.lg {
 
 .gallery-view-sm {
   width: 200px;
-  height:100px;
+  /*height:100px;*/
   float: left;
   padding: 5px;
   text-align: center;

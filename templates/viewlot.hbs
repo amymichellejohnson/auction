@@ -1,4 +1,4 @@
-<div class="container-fluid lotname">
+<div class="container lotname">
   {{#if this.products.length}}
     <ul class="list-group">
       <li class="list-group-item emphasis"><img class="lg" {{bind-attr src = lotphoto}}> {{title}}</li>
@@ -7,7 +7,7 @@
       {{#each item in products}}
         <ul class="list-group gallery-view-sm">
           <li class="list-group-item">
-          {{#link-to 'viewproduct' item.id}} <img class="sm"{{bind-attr src = item.photo}}> {{item.name}} {{item.owner}} {{item.bidNumber}} {{item.startPrice}}{{/link-to}}
+          {{#link-to 'viewproduct' item.id}} <img class="sm"{{bind-attr src = item.photo}}> {{item.name}} {{item.owner}}{{/link-to}}
           </li>
         </ul>
       {{/each}}

@@ -37,7 +37,7 @@
   {{#each item in products}}
     <ul class="list-group gallery-view-sm">
       <li class="list-group-item ">
-        <p>{{#link-to 'product' item.id}} <img class="sm"{{bind-attr src = item.photo}}> {{item.name}} {{item.owner}} {{item.bidNumber}} {{item.startPrice}}{{/link-to}}</p>
+        <p>{{#link-to 'product' item.id}} <img class="sm"{{bind-attr src = item.photo}}> {{item.name}}, {{item.owner}}{{/link-to}}</p>
         <button class="btn btn-danger" {{action 'delete' item}}>Delete</button>
       </li>
     </ul>
