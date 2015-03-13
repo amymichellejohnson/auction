@@ -1,5 +1,11 @@
 Auction.LotsController = Ember.ArrayController.extend({
+  isAdding: false,
   actions: {
+    adding: function() {
+      this.set('isAdding', true);
+      console.log("got here");
+    },
+
     save: function() {
       var newLot = this.store.createRecord('lot', {
         title: this.get('title'),
@@ -7,6 +13,7 @@ Auction.LotsController = Ember.ArrayController.extend({
         lotphoto: this.get('lotphoto')
       });
       newLot.save();
+      this.set('isAdding', false);
 
       this.set('title', null),
       this.set('date', null),

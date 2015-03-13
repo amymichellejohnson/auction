@@ -35,8 +35,8 @@
     <h3>Products currently in the {{title}} Department:</h3>
     <ul class="list-group">
       {{#each item in products}}
-        <li class="list-group-item">
-          <p>{{#link-to 'product' item.id}} <img {{bind-attr src = item.photo}} height="100" width="100"> {{item.name}} {{item.owner}} {{item.bidNumber}} {{item.startPrice}}{{/link-to}}</p>
+        <li class="list-group-item gallery-view-sm">
+          <p>{{#link-to 'product' item.id}} <img {{bind-attr src = item.photo}} width="164"> {{item.name}} {{item.owner}} {{item.bidNumber}} {{item.startPrice}}{{/link-to}}</p>
           <button class="btn btn-danger" {{action 'delete' item}}>Delete</button>
         </li>
       {{/each}}

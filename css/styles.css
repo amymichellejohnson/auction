@@ -1,14 +1,31 @@
-h2, h3{
-  font-family: 'Courgette', cursive;
-}
+a {
+color: black;
 
+}
 .lotname {
-  font-family: 'Courgette', cursive;
-  font-size: 200%
+  font-size: 150%;
 }
 
+.list-group-item {
+  background-color: #EEEEEE;
+}
+.gallery-view-lg {
+  width: 360px;
+  /*height: 400px;*/
+  float: left;
+  padding: 5px;
+  text-align: center;
+}
+
+.gallery-view-sm {
+  width: 200px;
+  /*height:100px;*/
+  float: left;
+  padding: 5px;
+  text-align: center;
+
+}
 .productname {
-  font-family: 'Courgette', cursive;
   font-size: 150%
 }
 .inner-item {
@@ -28,4 +45,40 @@ h2, h3{
 
 .navbar {
     margin-bottom: 0;
+    padding: 20px;
 }
+
+.nav {
+  font-size: 120%;
+}
+
+.navbar-brand {
+  font-size: 250%;
+}
+
+/*div.img {
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid #0000ff;
+    height: auto;
+    width: auto;
+    float: left;
+    text-align: center;
+}*/
+
+/*div.img img {
+    display: inline;
+    margin: 5px;
+    border: 1px solid #ffffff;
+}
+
+div.img a:hover img {
+    border:1px solid #0000ff;
+}
+
+div.desc {
+    text-align: center;
+    font-weight: normal;
+    width: 120px;
+    margin: 5px;
+}*/

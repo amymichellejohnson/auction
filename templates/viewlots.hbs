@@ -5,8 +5,8 @@
   {{/if}}
   <br>
   {{#each}}
-  <ul class="list-group">
-    <li class="list-group-item"> {{#link-to 'viewlot' this.id}} <img {{bind-attr src = lotphoto}} height="164" width="300"> {{title}}{{/link-to}}</li>
+  <ul class="list-group gallery-view-lg">
+    <li class="list-group-item"> {{#link-to 'viewlot' this.id}} <img {{bind-attr src = lotphoto}} width="300">{{title}}{{/link-to}}</li>
   </ul>
   {{/each}}
 </div>

@@ -1,81 +1,37 @@
 
-
-<!-- <div class="container"> -->
-  <!-- <div class="col-md-12 well"> -->
-    <div class="bs-example">
-      <div id="myCarousel" class="carousel slide" data-interval="4000" data-ride="carousel">
-        <!-- Carousel indicators -->
-        <ol class="carousel-indicators">
-          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-          <li data-target="#myCarousel" data-slide-to="1"></li>
-          <li data-target="#myCarousel" data-slide-to="2"></li>
-          <li data-target="#myCarousel" data-slide-to="3"></li>
-
-        </ol>
-
-
-        <!-- Carousel items -->
-        <div class="carousel-inner">
-          <div class="active item">
-            <!-- <h2>Slide 1</h2> -->
-            <img src="https://inspirationfeeed.files.wordpress.com/2013/09/p6xwfbf1.jpg"/>
-            <div class="carousel-caption">
-            </div>
-          </div>
-          <div class="item">
-              <img src="http://www.ulc.org/wp-content/uploads/2012/05/Proxy-Falls-Three-Sisters-Wilderness-Oregon.jpg"/>
-          </div>
-          <div class="item">
-              <img src="http://i.huffpost.com/gen/1966437/thumbs/o-CRAFT-BEERS-facebook.jpg"/>
-          </div>
-          {{#each}}
-          <div class="item">
-              <img {{bind-attr src = lotphoto}} />
-          </div>
-          {{/each}}
-        </div>
-        <!-- Carousel nav -->
-        <a class="carousel-control left" href="#myCarousel" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left"></span>
-        </a>
-        <a class="carousel-control right" href="#myCarousel" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right"></span>
-        </a>
-      </div>
-    </div>
-  <!-- </div> -->
-<!-- </div> -->
-
-
 <div class="container">
-  <div class="col-md-6">
-    <h2>Create a Department:</h2>
-    <br>
-    <form class="form">
-      <div class="form-group">
-        <label for="title">Department Title:</label>
-        {{input name="title" value=title type="text" placeholder="Title"}}
-      </div>
-      <div class="form-group">
-        <label for="date">Date of creation:</label>
-        {{input name="date" value=date type="date"}}
-      </div>
-      <div class="form-group">
-        <label for="lotphoto">Upload Department Photo</label>
-        {{input name="lotphoto" value=lotphoto type="url" placeholder="https://......"}}
-      </div>
-      <button class="btn btn-default" {{action 'save'}}>Submit</button>
-    </form>
-  </div>
-  <div class="col-md-6 lotname">
-    {{#if this.length}}
-      <h2>Click on a Department to Add Products:</h2>
-    {{/if}}
-    <br>
-    {{#each}}
-      <p>{{#link-to 'lot' this.id}} <img {{bind-attr src = lotphoto}} height="164" width="164"> {{title}}{{/link-to}}
-      <button class="btn btn-xs btn-danger" {{action 'delete' this}}>Delete</button></p>
+  <div class="lotname">
+    {{#unless isAdding}}
+      <h2>Click on a Department to add your products:</h2>
 
-    {{/each}}
+      <br>
+      {{#each}}
+        <ul class="list-group gallery-view-sm">
+          <li class="list-group-item"><p>{{#link-to 'lot' this.id}} <img {{bind-attr src = lotphoto}}  width="164"> {{title}}{{/link-to}}</p>
+          <button class="btn btn-xs btn-danger" {{action 'delete' this}}>Delete</button></li>
+        </ul>
+      {{/each}}
+      <h2 {{action "adding"}}>Don't see the department you need?  Add a department here</h2>
+
+    {{/unless}}
   </div>
+    {{#if isAdding}}
+      <h2>Create a Department:</h2>
+      <br>
+      <form class="form">
+        <div class="form-group">
+          <label for="title">Department Title:</label>
+          {{input name="title" value=title type="text" placeholder="Title"}}
+        </div>
+        <div class="form-group">
+          <label for="date">Date of creation:</label>
+          {{input name="date" value=date type="date"}}
+        </div>
+        <div class="form-group">
+          <label for="lotphoto">Upload Department Photo</label>
+          {{input name="lotphoto" value=lotphoto type="url" placeholder="https://......"}}
+        </div>
+        <button class="btn btn-default" {{action 'save'}}>Submit</button>
+      </form>
+    {{/if}}
 </div>
