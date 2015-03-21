@@ -2,6 +2,8 @@ INTRODUCTION
 ------------
 The Auction app allows users to create lots for an auction and to then input individual products into those lots.  Users can click on individual products to view more information and when the auction will be held.
 
+View this app at : http://amymichellejohnson.github.io/auction
+
 MOTIVATION
 ------------
 To practice using templates, controllers, an application template, models, and to practice storing data properly with ember.js.
