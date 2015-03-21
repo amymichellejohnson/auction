@@ -1,0 +1,47 @@
+<br>
+<div class="container well">
+  <form class="form">
+    <h3>Add Products to the {{title}} Department:</h3>
+    <br>
+    <div class="form-group">
+      <label for="Name">Product Title:</label>
+      {{input name="name" value=name type="text" placeholder="Name of item" class="form-control"}}
+    </div>
+    <div class="form-group">
+      <label for="description">Description:</label>
+      {{textarea name="description" value=description type="text" class="form-control"}}
+    </div>
+    <div class="form-group">
+      <label for="owner">Artist/Producer:</label>
+      {{input name="owner" value=owner type="text" class="form-control"}}
+    </div>
+    <div class="form-group">
+      <label for="startPrice">Estimated Price:</label>
+      {{input name="startPrice" value=startPrice type="text" class="form-control"}}
+    </div>
+    <div class="form-group">
+      <label for="backstory">Item's backstory:</label>
+      {{textarea name="backstory" value=backstory type="text" class="form-control"}}
+    </div>
+    <div class="form-group">
+      <label for="photo">Upload Picture:</label>
+      {{input name="photo" value=photo type="url" class="form-control"}}
+    </div>
+    <button class="btn btn-default" {{action 'save'}}>Submit</button>
+  </form>
+</div>
+{{#if this.products.length}}
+<hr>
+<div class="container-fluid">
+  <h3>Products currently in the {{title}} Department:</h3>
+  {{#each item in products}}
+    <ul class="list-group gallery-view-sm">
+      <li class="list-group-item ">
+        <p>{{#link-to 'product' item.id}} <img class="sm"{{bind-attr src = item.photo}}> {{item.name}}, {{item.owner}}{{/link-to}}</p>
+        <button class="btn btn-danger" {{action 'delete' item}}>Delete</button>
+      </li>
+    </ul>
+  {{/each}}
+</div>
+  {{outlet}}
+{{/if}}

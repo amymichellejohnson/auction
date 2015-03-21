@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Oregon Crafter</title>
+  <script src="libs/jquery-1.11.2.js"></script>
+  <script src="css/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+
+
+
+  <script src="libs/ember-template-compiler-1.10.0.js"></script>
+  <script src="libs/ember-1.10.0.debug.js"></script>
+  <script src="libs/ember-handlebars-loader-0.0.2.js"></script>
+  <script src="libs/ember-data.js"></script>
+  <script src="libs/localstorage_adapter.js"></script>
+
+  <script src="auction.js"></script>
+  <script src="router.js"></script>
+  <script src="store.js"></script>
+
+  <script src="controllers/lots.js"></script>
+  <script src="controllers/lot.js"></script>
+  <script src="controllers/product.js"></script>
+  <script src="controllers/home.js"></script>
+  <script src="controllers/viewlots.js"></script>
+  <script src="controllers/viewlot.js"></script>
+
+
+  <script src="routes/lots.js"></script>
+  <script src="routes/lot.js"></script>
+  <script src="routes/product.js"></script>
+  <script src="routes/home.js"></script>
+  <script src="routes/viewlots.js"></script>
+  <script src="routes/viewlot.js"></script>
+
+  <script src="models/lot.js"></script>
+  <script src="models/product.js"></script>
+
+  <script>
+    EmberHandlebarsLoader.loadTemplates(['application', 'home','lots', 'product', 'lot', 'viewlots', 'viewlot', 'about', 'viewproduct']);
+  </script>
+</head>
+<body>
+
+</body>
+</html>
