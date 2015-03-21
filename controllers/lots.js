@@ -1,9 +1,9 @@
 Auction.LotsController = Ember.ArrayController.extend({
   isAdding: false,
+  
   actions: {
     adding: function() {
       this.set('isAdding', true);
-      console.log("got here");
     },
 
     cancel: function() {
