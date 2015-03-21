@@ -1,0 +1,48 @@
+
+
+<!-- <div class="container"> -->
+  <!-- <div class="col-md-12 well"> -->
+    <div class="bs-example">
+      <div id="myCarousel" class="carousel slide" data-interval="4000" data-ride="carousel">
+        <!-- Carousel indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+          <li data-target="#myCarousel" data-slide-to="3"></li>
+
+        </ol>
+
+
+        <!-- Carousel items -->
+        <div class="carousel-inner">
+          <div class="active item">
+            <!-- <h2>Slide 1</h2> -->
+            <img src="https://inspirationfeeed.files.wordpress.com/2013/09/p6xwfbf1.jpg"/>
+            <div class="carousel-caption">
+              <!-- <h4>Kitten Is Utterly Confused By The Discovery Of Her Tail</h4> -->
+            </div>
+          </div>
+          <div class="item">
+              <img src="http://www.ulc.org/wp-content/uploads/2012/05/Proxy-Falls-Three-Sisters-Wilderness-Oregon.jpg"/>
+          </div>
+          <div class="item">
+              <img src="http://i.huffpost.com/gen/1966437/thumbs/o-CRAFT-BEERS-facebook.jpg"/>
+          </div>
+          {{#each}}
+          <div class="item">
+              <img {{bind-attr src = lotphoto}} />
+          </div>
+          {{/each}}
+        </div>
+        <!-- Carousel nav -->
+        <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="carousel-control right" href="#myCarousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+      </div>
+    </div>
+  <!-- </div> -->
+<!-- </div> -->

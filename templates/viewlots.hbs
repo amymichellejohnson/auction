@@ -1,0 +1,12 @@
+<div class="container-fluid lotname">
+  {{#if this.length}}
+    <h2>Departments</h2>
+    <hr>
+  {{/if}}
+  <br>
+  {{#each}}
+  <ul class="list-group gallery-view-lg">
+    <li class="list-group-item"> {{#link-to 'viewlot' this.id}} <img class="md" {{bind-attr src = lotphoto}}>{{title}}{{/link-to}}</li>
+  </ul>
+  {{/each}}
+</div>

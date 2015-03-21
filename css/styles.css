@@ -1,22 +1,56 @@
-body {
-font-family: 'Caudex', serif;
+a {
+color: black;
+
 }
 
-/*.carousel-element{
-    margin-left: -100px;
+img.sm {
+  height: 165px;
+  width: 165px;
+}
+img.md {
+  height: 300px;
+  width: 300px;
+}
+img.lg {
+  height: 600px;
+  width: 650px;
+
+}
+
+/*.container-fluid {
+  text-align: center;
+  margin-right: 5px;
 }*/
 
-/*.carousel{
-    margin-top: 20px;
-}*/
+.lotname {
+  font-size: 150%;
+}
 
-/*.carousel-inner > .item > img,
-.carousel-inner > .item > a > img {
-    width: 70%;
-    margin: auto;
-}*/
+.emphasis {
+  font-size: 300%
+}
 
+.list-group-item {
+  background-color: #EEEEEE;
+}
+.gallery-view-lg {
+  width: 350px;
+  float: left;
+  padding: 5px;
+  text-align: center;
+}
 
+.gallery-view-sm {
+  width: 200px;
+  /*height:100px;*/
+  float: left;
+  padding: 5px;
+  text-align: center;
+
+}
+.productname {
+  font-size: 150%
+}
 .inner-item {
     text-align: center;
     img {
@@ -24,9 +58,7 @@ font-family: 'Caudex', serif;
     }
 }
 
-/*.bs-example{
-	margin: 20px;
-}*/
+
 .item{
     /*background: #333;*/
     text-align: center;
@@ -36,4 +68,22 @@ font-family: 'Caudex', serif;
 
 .navbar {
     margin-bottom: 0;
+    padding: 20px;
+}
+
+.nav {
+  font-size: 120%;
+}
+
+.navbar-brand {
+  font-size: 250%;
+}
+
+p.link:hover {
+  color:blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+p.link{
+  color:blue;
 }
